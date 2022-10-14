@@ -6,7 +6,7 @@
 <body>
 
 {% block content %}
-{% include 'navbar.html' %}
+{% include 'components/navbar.html' %}
     <div class="container-md">
 
         
@@ -60,9 +60,9 @@
   <nav aria-label="Page navigation example">
     <ul class="pagination">
       <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-      <li class="page-item"><a class="page-link" href="{% url 'news_paginator' 1  %}">1</a></li>
-      <li class="page-item"><a class="page-link" href="{% url 'news_paginator' 2  %}">2</a></li>
-      <li class="page-item"><a class="page-link" href="{% url 'news_paginator' 3  %}">3</a></li>
+      <li class="page-item"><a class="page-link" href="{% url 'mainapp:news_paginator' 1  %}">1</a></li>
+      <li class="page-item"><a class="page-link" href="{% url 'mainapp:news_paginator' 2  %}">2</a></li>
+      <li class="page-item"><a class="page-link" href="{% url 'mainapp:news_paginator' 3  %}">3</a></li>
       <li class="page-item"><a class="page-link" href="#">Next</a></li>
     </ul>
   </nav>
@@ -70,7 +70,7 @@
 
     </div>
    
-    {% include 'footer.html' %}
+    {% include 'components/footer.html' %}
         <!-- JavaScript section -->
     <!-- Bootstrap -->
     <script src="{% static '/js/jquery-3.6.0.min.js' %}"></script>
