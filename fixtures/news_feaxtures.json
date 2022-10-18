@@ -1,0 +1,38 @@
+[
+    {
+        "model": "mainapp.news",
+        "pk": 1,
+        "fields": {
+            "title": "Вот это новость1",
+            "preambule": "А это что такое?1",
+            "body": "Мув ё боди1",
+            "body_as_markdown": false,
+            "created": "2022-10-14T18:18:56.522Z",
+            "updated": "2022-10-14T18:19:03.340Z"
+        }
+    },
+    {
+        "model": "mainapp.news",
+        "pk": 1,
+        "fields": {
+            "title": "Вот это новость2",
+            "preambule": "А это что такое?2",
+            "body": "Мув ё боди2",
+            "body_as_markdown": false,
+            "created": "2022-10-14T18:18:56.522Z",
+            "updated": "2022-10-14T18:19:03.340Z"
+        }
+    },
+    {
+        "model": "mainapp.news",
+        "pk": 1,
+        "fields": {
+            "title": "Вот это новость3",
+            "preambule": "А это что такое?3",
+            "body": "Мув ё боди3",
+            "body_as_markdown": false,
+            "created": "2022-10-14T18:18:56.522Z",
+            "updated": "2022-10-14T18:19:03.340Z"
+        }
+    }
+]
