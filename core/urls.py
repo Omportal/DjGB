@@ -20,7 +20,9 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('mainapp.urls'))
+    path('', include('mainapp.urls')),
+    path("social_auth/", include("social_django.urls", namespace="social")),
+    path('authapp/', include('authapp.urls', namespace='authapp')),
 ]
 
 if settings.DEBUG:

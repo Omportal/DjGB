@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "markdownify.apps.MarkdownifyConfig",
     'mainapp.apps.MainappConfig',
     'authapp.apps.AuthappConfig',
 ]
@@ -65,6 +66,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 "mainapp.context_processors.example.simple_context_processor",
+                "social_django.context_processors.backends",
+                "social_django.context_processors.login_redirect",
             ],
         },
     },
@@ -106,7 +109,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+AUTHENTICATION_BACKENDS = (
+        "social_core.backends.github.GithubOAuth2",
+        "django.contrib.auth.backends.ModelBackend",
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
@@ -132,3 +138,9 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = "authapp.CustomUser"
+
+SOCIAL_AUTH_GITHUB_KEY = '15f0eebd5479d03adae6'
+SOCIAL_AUTH_GITHUB_SECRET = '8485d4692789c09f8b57cbc0a2fb239174bae3b4'
+
+LOGIN_REDIRECT_URL = "mainapp:index"
+LOGOUT_REDIRECT_URL = "mainapp:index"
