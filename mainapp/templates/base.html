@@ -18,7 +18,19 @@
 
     <title>{% block title %}%Welcome to Braniac!{% endblock %}</title>
 </head>
+{% block messages %}
+{% include 'components/messages.html' %}
+{% endblock messages %}
 
 {% block content %}
 {% endblock %}
+<script>
+    $(document).ready(function () {
+    {% if messages %}
+    // Toasts
+    $(".toast").toast({ delay: 5000 });
+    $(".toast").toast("show");
+    {% endif %}
+    });
+    </script>
 </html>
