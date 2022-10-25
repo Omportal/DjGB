@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "markdownify.apps.MarkdownifyConfig",
     'mainapp.apps.MainappConfig',
     'authapp.apps.AuthappConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -144,3 +145,5 @@ SOCIAL_AUTH_GITHUB_SECRET = '8485d4692789c09f8b57cbc0a2fb239174bae3b4'
 
 LOGIN_REDIRECT_URL = "mainapp:index"
 LOGOUT_REDIRECT_URL = "mainapp:index"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
